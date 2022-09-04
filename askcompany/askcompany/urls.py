@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # 장고는 URL Reverse를 적극적으로 사용함
+    path('admin/', admin.site.urls), #앞에 주소는 마음대로 바꾸기 가능
     path('blog1/', include('blog1.urls')),
     path('instagram', include('instagram.urls')),
 ]
