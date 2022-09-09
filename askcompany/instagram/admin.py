@@ -13,8 +13,10 @@ from .models import Post
 #3번쨰 등록방법 (이진석)
 @admin.register(Post) #wrapping, 감싸서 대상 기능을 변경가능
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['id', 'message', 'message_length', 'created_at', 'updated_at']
+    list_display = ['id', 'message', 'message_length', 'is_public', 'created_at', 'updated_at']
     list_display_links = ['message'] #링크 클릭을 어느걸로 할건지
+    list_filter = ['created_at', 'is_public']
+    search_fields = ['message']
 
     def message_length(self, post):
         return f"{len(post.message)} 글자"
