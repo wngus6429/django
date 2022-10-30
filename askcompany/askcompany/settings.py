@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# 파일의 경로 조정
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -120,3 +121,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/' #파일의 URL접근시에 사용
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# 루트경로에서 media 폴더에 저장을 하겠다는 말임
+# MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'public' ,'media')

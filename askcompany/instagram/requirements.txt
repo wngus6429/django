@@ -1,0 +1,6 @@
+django~=3.0.0
+pillow
+
+# 위 처럼 적어서
+# pip install -r requirements.txt 라고 하면
+# 자동으로 패키지가 쭉 설치가 된다.
