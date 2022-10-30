@@ -21,8 +21,8 @@ class PostAdmin(admin.ModelAdmin):
 
     def photo_tag(self, post):
         if post.photo:
-            return mark_safe(f'<img src="{post.photo.url}" style="width:100px" />')
-        return None;
+            return mark_safe(f'<img src="{post.photo.url}" style="width:300px" />')
+        return None
 
     def message_length(self, post):
         return f"{len(post.message)} 글자"
