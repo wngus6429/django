@@ -16,7 +16,6 @@ import os
 # 파일의 경로 조정
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ SECRET_KEY = '#prp=u!-%fn@m=ls1)1=)-+^vnq8(v$6c&^99qz-!juy#aw=r+'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -72,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'askcompany.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -82,7 +79,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -102,7 +98,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -116,13 +111,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/' #파일의 URL접근시에 사용
+MEDIA_URL = '/media/'  # 파일의 URL접근시에 사용
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # 루트경로에서 media 폴더에 저장을 하겠다는 말임
 # MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'public' ,'media')
