@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Post
 from django.utils.safestring import mark_safe
-
-
 # Register your models here.
 
 # 1번째 등록방법
@@ -13,7 +11,7 @@ from django.utils.safestring import mark_safe
 #     pass
 # admin.site.register(Post, PostAdmin)
 
-# 3번쨰 등록방법 (이진석)
+# 3번쨰 등록방법 (이진석), 장식하는 방법
 @admin.register(Post)  # wrapping, 감싸서 대상 기능을 변경가능
 class PostAdmin(admin.ModelAdmin):
     list_display = ['id', 'photo_tag', 'message', 'message_length', 'is_public', 'created_at', 'updated_at']
