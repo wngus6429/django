@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+# from django.conf import global_settings
+# from askcompany import settings
+# 밑에와 같이 적어주면 위에꺼 2개 포함되어짐
 from django.conf import settings
 
 urlpatterns = [

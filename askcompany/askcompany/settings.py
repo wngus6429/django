@@ -120,3 +120,4 @@ MEDIA_URL = '/media/'  # 파일의 URL접근시에 사용
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # 루트경로에서 media 폴더에 저장을 하겠다는 말임
 # MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'public' ,'media')
+# BASE_DIR 이 프로젝트 경로임. 이 프로젝트 경로에서 한단계 올라가서 public폴더의 media의 의미
