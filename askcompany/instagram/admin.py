@@ -21,6 +21,7 @@ class PostAdmin(admin.ModelAdmin):
 
     def photo_tag(self, post):
         if post.photo:
+            #mark_safe를 적어야 뒤의 태그가 안전하다 판단해서 이미지를 보여주게 되는거임.
             return mark_safe(f'<img src="{post.photo.url}" style="width:200px; height:200px" />')
         return None
 
