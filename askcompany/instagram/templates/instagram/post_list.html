@@ -8,23 +8,27 @@
     <title>Instagram / Post List</title>
 </head>
 <body>
-<table class="table table-bordered table-hover">
-    <tbody>
-    {% for post in post_list %}
-        <tr>
-            <td>
-                {{ post.message }}
-            </td>
-            <td>
-                {% if post.photo %}
-                    <img src="{{ post.photo.url }}" style="width: 100px"/>
-                {% else %}
-                    No Photo
-                {% endif %}
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
+    <form action="" method="get">
+        <input type="text" name="q" value="{{ q }}"/>
+        <input type="submit" value="검색"/>
+    </form>
+    <table class="table table-bordered table-hover">
+        <tbody>
+        {% for post in post_list %}
+            <tr>
+                <td>
+                    {{ post.message }}
+                </td>
+               <td>
+                   {% if post.photo %}
+                       <img src="{{ post.photo.url }}" style="width: 100px"/>
+                   {% else %}
+                       No Photo
+                   {% endif %}
+               </td>
+             </tr>
+         {% endfor %}
+         </tbody>
 </table>
 {#    {{ post_list }}#}
 </body>
