@@ -30,5 +30,11 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+    import debug_toolbar
+    urlpatterns += [
+        # path에서 debug로 시작되는 주소는 debug_toolbar.urls에서 처리하겠다
+        path('__debug__/', include('debug_toolbar.urls')),
+    ]
 # settings.MEDIA_URL
 # settings.MEDIA_ROOT

@@ -20,3 +20,10 @@ class Post(models.Model):
     # def message_length(self):
     #     return len(self.message)
     # message_length.short_description = '메세지글자수'
+
+class Comment(models.Model):
+    # Post하고 관계가 있다는 말임, # post_id 필드가 생성이 된다
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

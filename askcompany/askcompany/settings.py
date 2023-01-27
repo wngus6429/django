@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # third apps
     'django_extensions',
+    'debug_toolbar',
     # locals apps
     'blog1',
     'instagram'
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'askcompany.urls'
@@ -125,3 +127,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # 루트경로에서 media 폴더에 저장을 하겠다는 말임
 # MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'public' ,'media')
 # BASE_DIR 이 프로젝트 경로임. 이 프로젝트 경로에서 한단계 올라가서 public폴더의 media의 의미
+
+INTERNAL_IPS = ['127.0.0.1']
