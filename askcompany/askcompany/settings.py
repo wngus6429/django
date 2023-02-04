@@ -129,3 +129,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # BASE_DIR 이 프로젝트 경로임. 이 프로젝트 경로에서 한단계 올라가서 public폴더의 media의 의미
 
 INTERNAL_IPS = ['127.0.0.1']
+
+# AUTH_USER_MODEL = 'auth.User'

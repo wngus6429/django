@@ -1,8 +1,10 @@
 from django.db import models
-
+from django.conf import settings
+# from django.contrib.auth.models import User
 
 # Create your models here.
 class Post(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     message = models.TextField()
     # 이미지 라이브러리 pillow 를 설치했음, upload_to 연월일시간분초 까지 가능함.
     photo = models.ImageField(blank=True, upload_to='instagram/post/%Y/%m/%d', max_length=200)
